@@ -2,8 +2,19 @@ import  COVID19Py
 import telebot
 
 
+
+
+
+from telebot import apihelper
+
+PROXY = 'socks5://154.16.63.16:1080'
+
+apihelper.proxy = {'https': PROXY}
+
+TOKEN = '1175013152:AAE1wYUd3L7NE6RBs7zYXqwks4Ow5XA4m5c'
+
 covid19 = COVID19Py.COVID19()
-bot = telebot.TeleBot('1175013152:AAE1wYUd3L7NE6RBs7zYXqwks4Ow5XA4m5c')
+bot = telebot.TeleBot(TOKEN)
 
 
 
